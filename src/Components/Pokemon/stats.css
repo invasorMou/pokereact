@@ -1,0 +1,24 @@
+.stats {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.stat {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 40% 10% 50%; 
+}
+.name {
+  padding-left: 20px;
+}
+.base, .name {
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 376px) {
+  .stat {
+    grid-template-columns: 45% 10% 45%; 
+  }
+}

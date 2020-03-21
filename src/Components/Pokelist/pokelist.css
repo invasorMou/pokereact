@@ -1,0 +1,31 @@
+.pokemon-list { 
+  height: 300px;
+  width: 300px;
+  overflow: scroll;
+  text-align: center;
+  background: white;
+  border: 1px solid grey;
+  border-radius: 20px;
+}
+.pokemon-index {
+  display: grid;
+  grid-template-columns: 35% 5% 60%;
+  font-size: 1.5rem;
+  border-top: 1px solid black;
+  padding: 15px 0;
+  background: floralwhite;
+  cursor: pointer;
+}
+.pokemon-name {
+  text-align: left;
+  grid-column-start: 3;
+}
+.pokemon-idx {
+  text-align: right;
+}
+
+@media only screen and (max-width: 376px) {
+  .pokemon-list { 
+    height: 180px;
+  }
+}
