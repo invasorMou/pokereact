@@ -23,7 +23,7 @@ function App() {
         <Pokelist setNumber={(n)=>setNumber(n)}/>
       </div>
         { pokemon.hasOwnProperty('name') ? 
-          <Pokemon {...pokemon} setLoading={setLoading}/>
+          <Pokemon {...pokemon} setLoading={setLoading} loading={loading}/>
           : 
           '' 
         }

@@ -22,7 +22,7 @@ export default function Pokemon(props) {
   
   return (
       <>
-        { loading ?
+        { props.loading ?
           <div className="pokemon-card loader"> 
             <h2>LOADING...</h2>
           </div>
