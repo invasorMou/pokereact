@@ -6,7 +6,7 @@ import './App.css';
 function App() {
   const [pokemon, setPokemon] = useState({});
   const [number, setNumber] = useState(1);
-
+  const [loading, setLoading] = useState(true);
   
   useEffect(() => {
     const fetchPokemon = async () => {
@@ -23,7 +23,7 @@ function App() {
         <Pokelist setNumber={(n)=>setNumber(n)}/>
       </div>
         { pokemon.hasOwnProperty('name') ? 
-          <Pokemon {...pokemon}/>
+          <Pokemon {...pokemon} setLoading={setLoading}/>
           : 
           '' 
         }

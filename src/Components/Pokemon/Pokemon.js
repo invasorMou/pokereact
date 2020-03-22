@@ -6,19 +6,16 @@ import './types.css';
 import './card.css';
 
 export default function Pokemon(props) {
-  const [loading, setLoading] = useState(true);
   const [pokeImg, setPokeImg] = useState('');
-  
   
   useEffect(()=>{
     async function fetchImg() {
-      setLoading(true)
       let response = await fetch(props.sprites.front_default);
       let myBlob = await response.blob();
       
       let objectURL = URL.createObjectURL(myBlob);
       setPokeImg(objectURL)
-      setLoading(false)
+      props.setLoading(false)
     }
     fetchImg()
   },[props.sprites.front_default])
